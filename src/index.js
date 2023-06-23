@@ -23,7 +23,8 @@ async function main() {
   const pluginResponse = handleInit(pluginRequest);
 
   if (!validatePluginResponse(pluginResponse)) {
-    process.stdout.write(errorResponse(`Invalid plugin response`));
+    const respStr = JSON.stringify(pluginResponse, null, 2);
+    process.stdout.write(errorResponse(`Invalid plugin response: ${respStr}`));
     return;
   }
 
