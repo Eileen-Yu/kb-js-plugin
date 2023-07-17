@@ -17,9 +17,15 @@ npm run build
 2. Load the plugin and run kb command
 
 ```shell
+# 1. Display help info for `init` subcommand
 EXTERNAL_PLUGINS_PATH=/Users/eileen/programming/kb-js-plugin/dist/ \
-  kubebuilder init --plugins=kb-js-plugin/v1
+  kubebuilder init --plugins=kb-js-plugin/v1 --help
+
+# 2. scaffold files by `init` subcommand with valid flag `--domain`
+EXTERNAL_PLUGINS_PATH=/Users/eileen/programming/kb-js-plugin/dist/ \
+  kubebuilder init --plugins=kb-js-plugin/v1 --domain eileen.io
 ```
 
 3. Check the output
-The plugin triggered by `init` will generate two files `file1` and `file2`.
+
+The plugin triggered by `init` will generate a file `initFile` with the domain you specified.
