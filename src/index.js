@@ -4,7 +4,8 @@ const {readStdin} = require('./utils/io');
 const {validatePluginRequest, validatePluginResponse} = require('./plugin-interface/validation');
 const {errorResponse} = require('./plugin-interface/error');
 const {handleInit} = require('./scaffold/init');
-const {handleMetadata} = require('./scaffold/metadata');
+const {handleMetadata} = require('./cmd/metadata');
+const {handleFlags} = require('./cmd/flags');
 
 async function main() {
   const input = await readStdin(process.stdin);
@@ -28,9 +29,9 @@ async function main() {
     // case "create webhook":
     //   pluginResponse = handleWebhook(pluginRequest);
     //   break;
-    // case "flags":
-    //   pluginResponse = handleFlags(pluginRequest);
-    //   break;
+    case "flags":
+      pluginResponse = handleFlags(pluginRequest);
+      break;
     case "metadata":
       pluginResponse = handleMetadata(pluginRequest);
       break;
