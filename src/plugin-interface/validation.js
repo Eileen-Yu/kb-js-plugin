@@ -24,7 +24,7 @@ function validatePluginRequest(rawStr) {
 }
 
 function validatePluginResponse(pluginResponse) {
-  return pluginResponse.apiVersion && pluginResponse.command && pluginResponse.metadata && pluginResponse.universe
+  return pluginResponse.apiVersion && pluginResponse.command && pluginResponse.universe
 }
 
 module.exports = {validatePluginRequest, validatePluginResponse}
