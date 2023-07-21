@@ -5,14 +5,13 @@
 // flag2: value2, value3
 // flag3: value not provided
 function parseArgs(args) {
+  const parsedArgs = {};
   // Check if args is not null and is an array
   if (!Array.isArray(args)) {
-    return null;
+    return parsedArgs;
   }
 
-  let parsedArgs = {};
   let currentFlag;
-
   args.forEach(arg => {
     // If the argument starts with '--', it's a new flag
     if (arg.startsWith("--")) {
