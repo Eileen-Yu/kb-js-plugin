@@ -20,10 +20,6 @@ function handleFlags({command, args, universe}) {
       Default: "example.domain.com",
       Usage: "sets the domain added in the scaffolded initFile"
     })
-  } else if (parsedSubcommands.api) {
-    // Add api-specific flags
-  } else if (parsedSubcommands.webhook) {
-    // Add webhook-specific flags
   } else {
     pluginResponse.error = true;
     pluginResponse.errorMsgs = ["unrecognized flag"];
