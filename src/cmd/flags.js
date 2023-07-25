@@ -1,19 +1,15 @@
 'use strict';
 
-const minimist = require('minimist');
-
-function handleFlags({command, args, universe}) {
+function handleFlags(pluginRequest) {
   // Initialize the PluginResponse structure
   let pluginResponse = {
     apiVersion: "v1alpha1",
-    command,
-    universe,
+    command: pluginRequest.command,
+    universe: pluginRequest.universe,
     flags: []
   };
 
-  const parsedSubcommands = minimist(args);
-
-  if (parsedSubcommands.init) {
+  if (pluginRequest.args[0] === "--init") {
     pluginResponse.flags.push({
       Name: "domain",
       Type: "string",
