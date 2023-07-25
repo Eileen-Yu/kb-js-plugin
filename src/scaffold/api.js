@@ -25,28 +25,3 @@ function handleApi({command, args, universe}) {
 }
 
 module.exports = {handleApi}
-
-// TODO: update PROJECT?
-/*
-const yaml = require('yaml')
-
-const projectInfo = yaml.parse('PROJECT')
-
-const resources = projectInfo.resources || [];
-
-resources.push(
-  {
-    api: {
-      crdVersion: "v1",
-      namespaced: true,
-    },
-    controller: true,
-    group,
-    kind,
-    version
-  }
-)
-
-const newProjectInfo = yaml.stringify({...projectInfo, resources})
-fs.writeFileSync('PROJECT', newProjectInfo)
-*/
