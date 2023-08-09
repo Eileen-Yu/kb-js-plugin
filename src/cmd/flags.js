@@ -11,10 +11,10 @@ function handleFlags(pluginRequest) {
 
   if (pluginRequest.args[0] === "--init") {
     pluginResponse.flags.push({
-      Name: "domain",
-      Type: "string",
-      Default: "example.domain.com",
-      Usage: "sets the domain added in the scaffolded initFile"
+      Name: "number",
+      Type: "int",
+      Default: "1",
+      Usage: "sets a number to be added in the scaffolded initFile"
     })
   } else {
     pluginResponse.error = true;
