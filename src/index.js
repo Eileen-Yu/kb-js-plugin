@@ -6,6 +6,7 @@ const {errorResponse} = require('./plugin-interface/error');
 const {handleInit} = require('./scaffold/init');
 const {handleApi} = require('./scaffold/api');
 const {handleWebhook} = require('./scaffold/webhook');
+const {handleEdit} = require('./scaffold/edit');
 const {handleMetadata} = require('./cmd/metadata');
 const {handleFlags} = require('./cmd/flags');
 
@@ -31,6 +32,9 @@ async function main() {
       break;
     case "create webhook":
       pluginResponse = handleWebhook(pluginRequest);
+      break;
+    case "edit":
+      pluginResponse = handleEdit(pluginRequest);
       break;
     case "flags":
       pluginResponse = handleFlags(pluginRequest);
