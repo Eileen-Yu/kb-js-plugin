@@ -60,3 +60,8 @@ The plugin triggered by `create api` will generate a file `apiFile` with the GVK
 The plugin triggered by `create webhook` will generate a file `webhookFile` with the GVK you specified.
 
 The plugin triggered by `edit` will update the `apiFile`.
+
+
+## Showcase
+
+![output](https://github.com/kubernetes-sigs/kubebuilder/assets/48944635/1aac358e-6488-4166-bdef-0b73d916423a)
