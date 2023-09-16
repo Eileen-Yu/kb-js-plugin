@@ -65,3 +65,8 @@ The plugin triggered by `edit` will update the `apiFile`.
 ## Showcase
 
 ![output](https://github.com/kubernetes-sigs/kubebuilder/assets/48944635/1aac358e-6488-4166-bdef-0b73d916423a)
+
+## More info
+
+- [Tutorial for writing the external plugin with this JS sample](https://eileen.hungry-mg.site/post/how-to-extend-kubebuilder-by-writing-an-external-plugin/)
+- [KB book](https://book.kubebuilder.io/plugins/external-plugins)
